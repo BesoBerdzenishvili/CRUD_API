@@ -1,4 +1,4 @@
 node_modules/
-package-cock.json
+package-lock.json
 dist/
 .env
