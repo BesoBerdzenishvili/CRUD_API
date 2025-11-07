@@ -40,6 +40,10 @@ class Database {
   async deleteUser(id: string): Promise<boolean> {
     return this.users.delete(id);
   }
+
+  clear(): void {
+    this.users.clear();
+  }
 }
 
 export const database = new Database();
