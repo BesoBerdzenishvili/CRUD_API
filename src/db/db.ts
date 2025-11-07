@@ -41,8 +41,12 @@ class Database {
     return this.users.delete(id);
   }
 
-  clear(): void {
-    this.users.clear();
+  getState(): Record<string, User> {
+    return Object.fromEntries(this.users);
+  }
+
+  setState(state: Record<string, User>): void {
+    this.users = new Map(Object.entries(state));
   }
 }
 

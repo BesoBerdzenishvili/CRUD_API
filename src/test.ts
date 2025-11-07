@@ -57,7 +57,7 @@ describe("CRUD API Tests", () => {
   });
 
   beforeEach(() => {
-    database.clear();
+    database.setState({});
   });
 
   describe("Scenario 1: Complete CRUD operations", () => {

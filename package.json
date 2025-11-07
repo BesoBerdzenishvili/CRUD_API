@@ -5,6 +5,9 @@
   "main": "dist/index.js",
   "scripts": {
     "start:dev": "nodemon src/index.ts",
+    "start:prod": "npm run build && node dist/bundle.js",
+    "start:multi": "ts-node src/cluster.ts",
+    "build": "webpack",
     "test": "jest",
     "test:cov": "jest --coverage"
   },
@@ -19,6 +22,7 @@
     "jest": "^30.2.0",
     "supertest": "^7.1.4",
     "ts-jest": "^29.4.5",
+    "ts-loader": "^9.5.4",
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.9.3",
